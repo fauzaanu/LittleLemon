@@ -26,3 +26,6 @@ class MenuItemsView(ListCreateAPIView):
 class SingleMenuItemView(RetrieveUpdateAPIView, DestroyAPIView):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    # assert that x is a sttring type
